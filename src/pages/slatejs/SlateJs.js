@@ -17,6 +17,7 @@ const SlateJs = () => {
 
   return (
     <div>
+      <a href="https://docs.slatejs.org/"><p>SlateJs Docs</p></a>
       <Slate
         editor={editor}
         value={value}

@@ -10,23 +10,21 @@ import SlateJs from './pages/slatejs';
 const App = () => (
   <ThemeProvider theme={theme}>
     <Router>
-      <div>
-        <Switch>
-          <Route path="/draftjs">
-            <Layout>
-              <DraftJs />
-            </Layout>
-          </Route>
-          <Route path="/slatejs">
-            <Layout>
-              <SlateJs />
-            </Layout>
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
+      <Switch>
+        <Route path="/draftjs">
+          <Layout>
+            <DraftJs />
+          </Layout>
+        </Route>
+        <Route path="/slatejs">
+          <Layout>
+            <SlateJs />
+          </Layout>
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
     </Router>
   </ThemeProvider>
 );

@@ -17,6 +17,7 @@ const DraftJs = () => {
 
   return (
     <Container onClick={focusEditor}>
+      <a href="https://draftjs.org/docs/getting-started/"><p>DraftJs Docs</p></a>
       <Editor
         ref={editor}
         editorState={editorState}
