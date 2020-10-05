@@ -3,15 +3,21 @@ import { Link } from 'react-router-dom';
 
 export const Nav = styled.nav`
   display: flex;
-  justify-content: space-evenly;
-  padding: 32px 16px;
+`;
+
+export const Tab = styled.div`
+  padding: 32px 0;
+  background-color: ${({ theme, background }) => theme[background] || 'white'};
+
+  &:hover {
+    background-color: ${({ theme, background }) => theme[`${background}Lighten`] || '#eee'};
+  }
 `;
 
 export const StyledLink = styled(Link)`
-  font-size: 24px;
+  width: 50%;
+  font-size: 32px;
+  text-align: center;
   text-decoration: none;
-
-  &:hover {
-    font-weight: bold;
-  }
+  color: ${({ color }) => color || 'black'};
 `;

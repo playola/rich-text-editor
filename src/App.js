@@ -2,6 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { theme } from './theme';
+import Layout from './components/layout';
 import Home from './pages/home';
 import DraftJs from './pages/draftjs';
 import SlateJs from './pages/slatejs';
@@ -12,10 +13,14 @@ const App = () => (
       <div>
         <Switch>
           <Route path="/draftjs">
-            <DraftJs />
+            <Layout>
+              <DraftJs />
+            </Layout>
           </Route>
           <Route path="/slatejs">
-            <SlateJs />
+            <Layout>
+              <SlateJs />
+            </Layout>
           </Route>
           <Route path="/">
             <Home />

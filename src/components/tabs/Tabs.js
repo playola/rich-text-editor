@@ -1,17 +1,18 @@
 import React from 'react';
-import { Nav, StyledLink } from './Tabs.styles';
+import { Nav, Tab, StyledLink } from './Tabs.styles';
 
 const Tabs = () => (
   <Nav>
-    <div>
-      <StyledLink to="/">Home</StyledLink>
-    </div>
-    <div>
-      <StyledLink to="/draftjs">DraftJs</StyledLink>
-    </div>
-    <div>
-      <StyledLink to="/slatejs">SlateJs</StyledLink>
-    </div>
+    <StyledLink to="/draftjs" color="white">
+      <Tab background="draftJsPrimary">
+        DraftJs
+      </Tab>
+    </StyledLink>
+    <StyledLink to="/slatejs" color="black">
+      <Tab background="slateJsPrimary">
+        SlateJs
+      </Tab>
+    </StyledLink>
   </Nav>
 );
 
