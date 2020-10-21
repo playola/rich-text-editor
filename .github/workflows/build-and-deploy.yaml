@@ -21,4 +21,4 @@ jobs:
         run: |
           npm run deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.RICH_TEXT_EDITOR_ACTIONS_TOKEN }}
