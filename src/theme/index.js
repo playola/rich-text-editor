@@ -2,6 +2,7 @@ import { lighten } from 'polished';
 
 const DRAFT_JS = '#843131';
 const SLATE_JS = '#D8D8D8';
+const ACTIVE = '#08A085';
 
 export const theme = {
   // DraftJs
@@ -11,4 +12,7 @@ export const theme = {
   // SlateJs
   slateJsPrimary: SLATE_JS,
   slateJsPrimaryLighten: lighten(0.1, SLATE_JS),
+
+  // Semantic
+  active: ACTIVE,
 };

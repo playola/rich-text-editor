@@ -1,9 +1,11 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Editor, EditorState } from 'draft-js';
-import { Container } from './DraftJs.styles';
+import { Editor, EditorState, ContentState } from 'draft-js';
+import Link from '../../components/link';
+import { EditorWrapper } from './DraftJs.styles';
 
 const DraftJs = () => {
-  const [editorState, setEditorState] = useState(EditorState.createEmpty());
+  const content = ContentState.createFromText('A line of text in a paragraph.');
+  const [editorState, setEditorState] = useState(EditorState.createWithContent(content));
 
   const editor = useRef(null);
 
@@ -16,14 +18,16 @@ const DraftJs = () => {
   }, []);
 
   return (
-    <Container onClick={focusEditor}>
-      <a href="https://draftjs.org/docs/getting-started/"><p>DraftJs Docs</p></a>
-      <Editor
-        ref={editor}
-        editorState={editorState}
-        onChange={editorState => setEditorState(editorState)}
-      />
-    </Container>
+    <div>
+      <Link href="https://draftjs.org/docs/getting-started/">DraftJs Docs</Link>
+      <EditorWrapper onClick={focusEditor}>
+        <Editor
+          ref={editor}
+          editorState={editorState}
+          onChange={editorState => setEditorState(editorState)}
+        />
+      </EditorWrapper>
+    </div>
   );
 };
 
