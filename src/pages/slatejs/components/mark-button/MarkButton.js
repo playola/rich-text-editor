@@ -2,7 +2,7 @@ import React from 'react';
 import { useSlate } from 'slate-react';
 import { Editor } from 'slate';
 import Icon from '../../../../components/icon';
-import { MarkButtonWrapper } from './MarkButton.styles';
+import { IconWrapper } from './MarkButton.styles';
 
 const isMarkActive = (editor, format) => {
   const marks = Editor.marks(editor);
@@ -22,7 +22,7 @@ const toggleMark = (editor, format) => {
 const MarkButton = ({ format, icon }) => {
   const editor = useSlate();
   return (
-    <MarkButtonWrapper
+    <IconWrapper
       active={isMarkActive(editor, format)}
       onMouseDown={event => {
         event.preventDefault();
@@ -30,7 +30,7 @@ const MarkButton = ({ format, icon }) => {
       }}
     >
       <Icon type={icon} margin="right" />
-    </MarkButtonWrapper>
+    </IconWrapper>
   );
 };
 
