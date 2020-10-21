@@ -1,6 +1,7 @@
 # Rich Text Editor
+> https://playola.github.io/rich-text-editor/
 
-Comparison between DraftJs and SlateJs
+Comparison between Rich Text Editors.
 
 ## Getting started
 
@@ -13,3 +14,5 @@ Comparison between DraftJs and SlateJs
 
   npm start
 ```
+
+See http://localhost:3000/
