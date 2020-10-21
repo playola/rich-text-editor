@@ -1,7 +1,6 @@
 {
   "name": "rich-text-editor",
   "version": "1.0.0",
-  "private": true,
   "homepage": "https://playola.github.io/rich-text-editor/",
   "scripts": {
     "start": "react-scripts start",
