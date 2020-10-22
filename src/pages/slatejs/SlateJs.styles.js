@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const EditorWrapper = styled.div`
   padding: 16px;
-  border: 1px solid black;
+  background-color: white;
   border-radius: 4px;
+  min-height: 400px;
 `;

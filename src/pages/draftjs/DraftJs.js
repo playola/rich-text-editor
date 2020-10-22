@@ -1,7 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Editor, EditorState, RichUtils } from 'draft-js';
 import Link from '../../components/link';
-import Toolbar from '../../components/toolbar';
+import ToolbarWrapper from '../../components/toolbar-wrapper';
+import Icon from '../../components/icon';
 import InlineStyleControls from './components/inline-style-controls';
 import { initialValue } from './config/initialValue';
 import { EditorWrapper } from './DraftJs.styles';
@@ -40,12 +41,6 @@ const DraftJs = () => {
     <div>
       <Link href="https://draftjs.org/docs/getting-started/">DraftJs Docs</Link>
       <EditorWrapper onClick={focusEditor}>
-        <Toolbar bottomspacing>
-          <InlineStyleControls
-            editorState={editorState}
-            onToggle={toggleInlineStyle}
-          />
-        </Toolbar>
         <Editor
           ref={editor}
           editorState={editorState}
@@ -53,6 +48,17 @@ const DraftJs = () => {
           onChange={onChange}
         />
       </EditorWrapper>
+      <ToolbarWrapper>
+        <Icon type="Picture" margin="right" />
+        <Icon type="VideoCamera" margin="right" />
+        <div>
+          |
+        </div>
+        <InlineStyleControls
+          editorState={editorState}
+          onToggle={toggleInlineStyle}
+        />
+      </ToolbarWrapper>
     </div>
   );
 };

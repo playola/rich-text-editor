@@ -6,7 +6,7 @@ export const Container = styled.div`
   justify-content: space-evenly;
   align-items: center;
   height: 100vh;
-  background-color: aliceblue;
+  background-color: ${({ theme }) => theme.lightPrimary};
 `;
 
 export const Card = styled.div`

@@ -1,9 +1,10 @@
 import React from 'react';
+import { Wrapper } from './Link.styles';
 
 const Link = ({ href, children }) => (
-  <a href={href} target="_blank" rel="noopener noreferrer">
+  <Wrapper href={href} target="_blank" rel="noopener noreferrer">
     <p>{children}</p>
-  </a>
+  </Wrapper>
 );
 
 export default Link;
